@@ -47,7 +47,7 @@ class Burger(Resource):
         else:
             burger.update({'price':data['price']})
         
-        return burgers
+        return burger
             
     def delete(self, name):
         global burgers
