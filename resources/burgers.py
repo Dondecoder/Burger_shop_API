@@ -25,7 +25,7 @@ class Burger(Resource):
             return {'message': 'This burger item is already on the list'}
         else:
             data = Burger.parser.parse_args()
-            burger = BurgerModel(name,data['price'], data['type'])
+            burger = BurgerModel(name,**data)
             try:
                 burger.save_to_db()
             except:
