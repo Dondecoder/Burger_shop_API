@@ -1,8 +1,5 @@
 from flask import Flask,app
 
-
-burgers = []
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///burgers.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
